@@ -1,0 +1,18 @@
+<div class="clearfix"></div>
+<div>
+    <table width="100%">
+        <tr>
+            <th>Name</th>
+            <th>Short Name</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="x in found">
+            <td width="20%">{{x.name}}</td>
+            <td width="10%">{{x.short_name}}</td>
+            <td width="50%">{{x.description}}</td>
+            <td width="20%" style="border:0;"><button ng-click="onRemove({index:$index})">Remove This Item</button></td>
+        </tr>
+    </table>
+    
+</div>
