@@ -1,0 +1,44 @@
+body
+{
+    background: #eee;
+}
+
+#theList ul
+{
+    display:inline;
+    text-align: center;
+    
+}
+
+#theList li
+{
+    padding:3px
+}
+
+#theList li:nth-child(even)
+{
+    color:red;
+}
+
+#theList li:nth-child(odd)
+{
+    color:blue;
+}
+
+h1,small
+{
+    text-align:center;
+    display:block;
+}
+
+#nav
+{
+    text-align:center;
+}
+
+#nav li
+{
+    display:inline;
+    padding:2px 5px
+
+}

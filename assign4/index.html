@@ -1,0 +1,37 @@
+<doctype! html>
+<html>
+    <head>
+        <title>Home Restaurant</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div ng-app="MenuApp">
+<!--            view for the different view-->
+            <ui-view></ui-view>
+        </div>
+    </body>
+<!--    scripts-->
+    
+    <script src="js/angular.min.js"></script>
+    <script src="js/ui-route.js"></script>
+    
+<!--    modules-->
+    <script src="js/module/menuapp.module.js"></script>
+    <script src="js/module/data.module.js"></script>
+    
+
+<!--    services-->
+    <script src="js/services/menudata.services.js"></script>
+    
+<!--    views-->
+    <script src="js/views.js"></script>
+        
+
+<!--    components-->
+    <script src="js/components/categories.component.js"></script>
+    <script src="js/components/item.component.js"></script>
+
+<!--    component Controller-->
+    <script src="js/controller/categoryController.js"></script>
+    <script src="js/controller/itemsController.js"></script>
+</html>
