@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-md-offset-3">
+            <form name="signUp" novalidate>
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" name="fname" placeholder="First Name" class="form-control" ng-model="signUpCtrl.fname" required>
+                    <span ng-if="singUp.fname.$error.required && signUp.fname.$touched">Required</span>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" name="lname" placeholder="Last Name" class="form-control" ng-model="signUpCtrl.lname" required>
+                    <span ng-if="singUp.lname.$error.required && signUp.lname.$touched">Required</span>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" name="phone" placeholder="555-555-5555" class="form-control" ng-model="signUpCtrl.phone" required pattern = "(\d{3})-(\d{3})-(\d{4})">
+                    <span ng-if="singUp.phone.$error.required && signUp.phone.$touched"> Phone Required</span>
+                    <span ng-if=signUp.phone.$error.pattern>ex.555-555-5555
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Email" class="form-control" ng-model="signUpCtrl.email" required>
+                    <span ng-if="singUp.email.$error.required && signUp.email.$touched"> Email Required</span>
+                    <span ng-if="signUp.email.$error.email">Invalid Email</span>
+                </div>
+                <div class="form-group">
+                    <label>Favorite Dish</label>
+                    <input type="text" name="fdish" placeholder="Favorite Dish Short Name" ng-blur="signUpCtrl.blur()" class="form-control" ng-model="signUpCtrl.fdish">
+                    <span ng-if="signUpCtrl.formSubmitted">{{signUpCtrl.message}}</span>
+                </div>
+                <div class="form-group">
+                    <button ng-disabled="signUp.$invalid" ng-click="signUpCtrl.submitForm()">Submit</button>
+                </div>
+            </form>
+<!--            component-->
+<!--
+            <div ng-if="signUpCtrl.success">
+               <favorite-dish fdish="signUpCtrl.favoriteDish"></favorite-dish>
+            </div>
+-->
+<!--            end of component-->
+        </div>
+    </div>
+</div>
+

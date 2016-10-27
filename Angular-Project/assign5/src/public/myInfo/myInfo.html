@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-md-offset-3">
+            <div ng-if="!myInfoCtrl.registered">
+                <p class="center">
+                    Not Signed Up Yet. <a ui-sref ="public.signup">Sign up Now!</a>
+                </p>
+            </div>
+            <div ng-if="myInfoCtrl.registered">
+                <p>
+                    <p>
+                        First Name <br/>
+                        {{myInfoCtrl.fname}}
+                    </p>
+    
+                    <p>
+                        Last Name <br/>
+                        {{myInfoCtrl.lname}}
+                    </p>
+                    <p>
+                        Phone <br/>
+                        {{myInfoCtrl.phone}}
+                    </p>
+                    <p>
+                        Email <br/>
+                        {{myInfoCtrl.email}}
+                    </p>
+    
+                </p>
+<!--            component-->
+                <p>Your favorite dish is</p>
+                <favorite-dish fdish="myInfoCtrl.fdish"></favorite-dish>
+            
+            </div>
+        </div>
+    </div>
+</div>

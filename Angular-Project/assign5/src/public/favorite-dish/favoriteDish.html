@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-sm-6">
+        <img ng-src="https://abel-angular.herokuapp.com/images/{{$ctrl.fdish.short_name}}.jpg" alt="{{$ctrl.fdish.name}}"/>
+    </div>
+    <div class="col-sm-6">
+            <h3>{{$ctrl.fdish.name}}</h3>
+            <p>{{$ctrl.fdish.description}}</p>
+            <span ng-if="$ctrl.fdish.price_small !== null">Small: {{$ctrl.fdish.price_small | currency}}</span>
+            <span ng-if="$ctrl.fdish.price_large !== null">Large: {{$ctrl.fdish.price_large | currency}}</span>
+    </div>
+</div>
+    
